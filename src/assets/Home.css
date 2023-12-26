@@ -137,6 +137,7 @@ body {
 /* Home.css */
 
 .btn {
+  margin-top: 2px;
   position: relative;
   overflow: hidden;
   display: inline-block;

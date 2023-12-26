@@ -7,7 +7,6 @@ import "./assets/Show.css"; // Import the CSS file
 
 const Show = () => {
   const [expenses, setExpenses] = useContext(ExpenseContext);
-
   const handleDelete = (index) => {
     const updatedExpenses = [...expenses];
     updatedExpenses.splice(index, 1);
@@ -16,40 +15,78 @@ const Show = () => {
   };
 
   return (
-    <div className="scroler">
-      <div className="link-container">
-        <Link to="/filter">Filter Expenses</Link>
-        <br />
-        <Link to="/create">Create Expenses</Link>
-        <br />
-        <Link to="/">Go Home</Link>
-      </div>
+    <>
+      <div className="cristalBall">
+        <div className="cristal">
+          <div className="ball">
+            <div className="name">
+              <div className="login-box3">
+                <div className="user-box2">
+                  <Link to="/filter" className="nav-linkl">
+                    Filter Expenses
+                  </Link>
+                  <br />
+                  <Link to="/create" className="nav-linkl">
+                    Create Expenses
+                  </Link>
+                  <br />
+                  <Link to="/" className="nav-linkl">
+                    Go Home
+                  </Link>
+                  <h2>
+                    Total Spent: $
+                    {expenses.reduce((ac, cv) => ac + +cv.amount, 0)}
+                  </h2>
+                </div>
 
-      <h2>Total Spent: ${expenses.reduce((ac, cv) => ac + +cv.amount, 0)} </h2>
-      <div className="expense-container">
-        {expenses.length === 0 ? (
-          <p>No Data Present</p>
-        ) : (
-          expenses.map((e, index) => (
-            <div key={index} className="expense-box">
-              <p>
-                <strong>Use For:</strong> {e.category}
-              </p>
-              <p>
-                <strong>Payment Mode:</strong> {e.payment}
-              </p>
-              <p>
-                <strong>Amount:</strong> ${e.amount}
-              </p>
-              <p>
-                <strong>Remark:</strong> {e.remark}
-              </p>
-              <button onClick={() => handleDelete(index)}>Delete</button>
+                <div className="user-box">
+                  {expenses.length === 0 ? (
+                    <p>No Data Present</p>
+                  ) : (
+                    expenses.map((e, index) => (
+                      <ul key={index} className="expense-box">
+                        <li>
+                          <i>Use For: </i> {e.category}
+                        </li>
+                        <li>
+                          <i>Payment Mode: </i>( {e.payment} )
+                        </li>
+                        <li>
+                          <i>Amount: </i> ${e.amount}
+                        </li>
+                        <li>
+                          <i>Remark: </i> {e.remark}
+                        </li>
+                        <div className="cta-buttons">
+                          <button
+                            className="btn"
+                            onClick={() => handleDelete(index)}
+                          >
+                            <span>Remove</span>
+                            <div className="liquid"></div>
+                          </button>
+                        </div>
+                      </ul>
+                    ))
+                  )}
+                </div>
+              </div>
             </div>
-          ))
-        )}
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="background">
+        <div className="circle">
+          <div className="circle1">
+            <div className="circle2">
+              <div className="circle3">
+                {/* <div className="star">Hire</div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -1,79 +1,70 @@
-/* Show.css */
-
-.scroler {
-  height: 100vh; /* Set the height of the container to 100% of the viewport height */
-  overflow-y: scroll; /* Enable vertical scrolling if the content overflows */
-  scrollbar-width: thin; /* Firefox scrollbar width */
-  scrollbar-color: transparent transparent; /* Firefox scrollbar color */
+.login-box3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  max-height: 600px;
+  color: rgb(1, 1, 1);
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  /* overflow-y: scroll; */
+  /* width: fit-content; */
+  background-color: #79ece25a;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.user-box2 {
+  /* overflow-y: auto; Enable vertical scrolling */
+  max-height: 150px; /* Set a maximum height */
 }
 
-.scroler::-webkit-scrollbar {
+.login-box3 h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.user-box::-webkit-scrollbar {
   width: 6px; /* Width of the scrollbar */
 }
 
-.scroler::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Color of the thumb (the draggable part) */
+.user-box::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.625
+  ); /* Color of the thumb (the draggable part) */
 }
 
-.scroler::-webkit-scrollbar-track {
-  background-color: transparent; /* Color of the track (the non-draggable part) */
+.user-box::-webkit-scrollbar-track {
+  background-color: rgba(
+    71,
+    69,
+    69,
+    0.222
+  ); /* Color of the track (the non-draggable part) */
 }
-.link-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-h2 {
-  text-align: center;
-  color: #333;
-}
-
-ol {
-  list-style: none;
-  padding: 0;
-}
-
-ol {
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-}
-
-.expense-box {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #f9f9f9;
-}
-
 ul {
-  padding: 0;
-  margin: 0;
+  text-align: start;
+}
+.user-box2 .nav-linkl {
+  display: block;
+  line-height: 0;
+  color: #fbeaea;
+  text-decoration: overline;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-ul li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.user-box2 .nav-linkl:hover {
+  color: #03e9f4; /* Change the color on hover */
 }
 
-ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-button {
-  background-color: #e74c3c;
+.user-box2 h2 {
+  margin: 20px 0;
   color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-} 
-
-button:hover {
-  background-color: #c0392b;
+  font-size: 24px;
 }
-
-/* Add additional styling based on your design preferences
