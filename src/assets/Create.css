@@ -14,7 +14,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 450px;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -76,7 +76,7 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  margin-top: 10px;
   letter-spacing: 4px
 }
 
@@ -205,10 +205,10 @@ select:hover option {
 select:focus option {
   background: #2ecc71;
 }
-.flx{
+/* .flx{
   display: flex;
   gap: 10px;
   
-}
+} */
 
 

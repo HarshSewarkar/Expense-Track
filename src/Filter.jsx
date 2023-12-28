@@ -25,6 +25,17 @@ const Filter = () => {
               <div className="flex-container">
                 {/* Flex container for login-box and user-box */}
                 <div className="login-box">
+                  <div className="user-box2">
+                    <Link to="/" className="nav-linkl">
+                      Go Home
+                    </Link>
+                    <Link to="/create" className="nav-linkl">
+                      Create Expenses
+                    </Link>
+                    <Link to="/show" className="nav-linkl">
+                      Show Expenses
+                    </Link>
+                  </div>
                   <h2>Filter Expense</h2>
                   <form onSubmit={SubmitHandler}>
                     <div className="user-box">
@@ -52,13 +63,13 @@ const Filter = () => {
                         <span></span>
                         Filter Expense
                       </button>
-                      <Link className="a" to="/show">
+                      {/* <Link className="a" to="/show">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         View Expenses
-                      </Link>
+                      </Link> */}
                     </div>
                   </form>
                   <hr />

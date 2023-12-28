@@ -1,6 +1,6 @@
 .login-box2 {
     color: white;
-    font-size:0.9vw ;
+    font-size:1vw ;
   } 
   ol {
     list-style: none;
@@ -19,7 +19,9 @@
     scrollbar-color: transparent transparent;
     height: 200px;
   } 
-
+.nav-linkl{
+  margin-bottom: 10px;
+}
  .login-box2::-webkit-scrollbar {
     width: 6px; /* Width of the scrollbar */
   }

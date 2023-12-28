@@ -34,6 +34,17 @@ const Create = () => {
           <div className="ball">
             <div className="name">
               <div className="login-box">
+                <div className="user-box2">
+                  <Link to="/" className="nav-linkl">
+                    Go Home
+                  </Link>
+                  <Link to="/filter" className="nav-linkl">
+                    Filter Expenses
+                  </Link>
+                  <Link to="/show" className="nav-linkl">
+                    Show Expenses
+                  </Link>
+                </div>
                 <h2>Create Expense</h2>
                 <form onSubmit={SubmitHandler}>
                   <div className="user-box">
@@ -85,13 +96,13 @@ const Create = () => {
                       <span></span>
                       Add Expense
                     </button>
-                    <Link className="a" to="/show">
+                    {/* <Link className="a" to="/show">
                       <span></span>
                       <span></span>
                       <span></span>
                       <span></span>
                       View Expenses
-                    </Link>
+                    </Link> */}
                   </div>
                 </form>
               </div>

@@ -2,20 +2,21 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
+  width: 450px;
   max-height: 600px;
   color: rgb(1, 1, 1);
   padding: 40px;
   transform: translate(-50%, -50%);
-  /* overflow-y: scroll; */
-  /* width: fit-content; */
-  background-color: #79ece25a;
+  background-color: #1e3a385a;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
 }
 .user-box2 {
   /* overflow-y: auto; Enable vertical scrolling */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
   max-height: 150px; /* Set a maximum height */
 }
 
@@ -52,7 +53,7 @@ ul {
 }
 .user-box2 .nav-linkl {
   display: block;
-  line-height: 0;
+  /* line-height: 0; */
   color: #fbeaea;
   text-decoration: overline;
   font-size: 18px;
@@ -64,7 +65,7 @@ ul {
 }
 
 .user-box2 h2 {
-  margin: 20px 0;
+  margin: 0px 80px;
   color: #fff;
   font-size: 24px;
 }

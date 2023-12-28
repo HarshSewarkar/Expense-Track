@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 import { ExpenseContext } from "./Context";
 import { Link } from "react-router-dom";
-import "./assets/Show.css"; // Import the CSS file
+import "./assets/Show.css";
 
 const Show = () => {
   const [expenses, setExpenses] = useContext(ExpenseContext);
@@ -22,23 +22,21 @@ const Show = () => {
             <div className="name">
               <div className="login-box3">
                 <div className="user-box2">
-                  <Link to="/filter" className="nav-linkl">
-                    Filter Expenses
-                  </Link>
-                  <br />
-                  <Link to="/create" className="nav-linkl">
-                    Create Expenses
-                  </Link>
-                  <br />
                   <Link to="/" className="nav-linkl">
                     Go Home
                   </Link>
+                  <Link to="/create" className="nav-linkl">
+                    Create Expenses
+                  </Link>
+                  <Link to="/filter" className="nav-linkl">
+                    Filter Expenses
+                  </Link>
                   <h2>
-                    Total Spent: $
+                    Total Spent: Rs. 
                     {expenses.reduce((ac, cv) => ac + +cv.amount, 0)}
                   </h2>
                 </div>
-
+                <div className="login-box2">
                 <div className="user-box">
                   {expenses.length === 0 ? (
                     <p>No Data Present</p>
@@ -52,7 +50,7 @@ const Show = () => {
                           <i>Payment Mode: </i>( {e.payment} )
                         </li>
                         <li>
-                          <i>Amount: </i> ${e.amount}
+                          <i>Amount: </i> {e.amount} Rs.
                         </li>
                         <li>
                           <i>Remark: </i> {e.remark}
@@ -69,6 +67,7 @@ const Show = () => {
                       </ul>
                     ))
                   )}
+                </div>
                 </div>
               </div>
             </div>
