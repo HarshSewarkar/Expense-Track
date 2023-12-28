@@ -13,7 +13,7 @@ const Create = () => {
   const [amount, setamount] = useState(0);
   const [remark, setremark] = useState("");
   const [category, setcategory] = useState("");
-  const [payment, setpayment] = useState("Choose Payment Type");
+  const [payment, setpayment] = useState("Cash ⬇️");
 
   const SubmitHandler = (e) => {
     e.preventDefault();
