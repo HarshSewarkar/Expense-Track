@@ -13,7 +13,7 @@ const Create = () => {
   const [amount, setamount] = useState(0);
   const [remark, setremark] = useState("");
   const [category, setcategory] = useState("");
-  const [payment, setpayment] = useState("cash");
+  const [payment, setpayment] = useState("Choose Payment Type");
 
   const SubmitHandler = (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ const Create = () => {
                     />
                     <label>Enter Amount</label>
                   </div>
-                  <div className="user-box">
+                  {/* <div className="user-box">
                     <input
                       onChange={(e) => setremark(e.target.value)}
                       value={remark}
@@ -66,7 +66,7 @@ const Create = () => {
                       required
                     />
                     <label>Enter Remark</label>
-                  </div>
+                  </div> */}
                   <div className="user-box">
                     <input
                       onChange={(e) => setcategory(e.target.value)}

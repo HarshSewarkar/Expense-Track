@@ -52,9 +52,9 @@ const Show = () => {
                         <li>
                           <i>Amount: </i> {e.amount} Rs.
                         </li>
-                        <li>
+                        {/* <li>
                           <i>Remark: </i> {e.remark}
-                        </li>
+                        </li> */}
                         <div className="cta-buttons">
                           <button
                             className="btn"
