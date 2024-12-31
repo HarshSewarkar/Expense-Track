@@ -12,7 +12,9 @@ const Filter = () => {
 
   const SubmitHandler = (e) => {
     e.preventDefault();
-    const filterExpenses = expenses.filter((item) => item[key] === value);
+    const filterExpenses = expenses.filter((item) =>
+      String(item[key]).toLowerCase().includes(value.toLowerCase())
+    );
     setfilterexpenses(filterExpenses);
   };
 
@@ -77,18 +79,18 @@ const Filter = () => {
                     <div className="user-box">
                       <h2>Expense</h2>
                       {/* Add this container around your filtered items */}
-                      <div className="filter-container">
-                        {filterexpenses.length === 0
-                          ? "no filter selected"
-                          : filterexpenses.map((e, index) => (
-                              <ol key={index}>
-                                <li>Use For = {e.category}</li>
-                                <li>Payment Mode = ({e.payment})</li>
-                                <li>Amount = {e.amount}</li>
-                                <li>Remark= {e.remark}</li>
-                              </ol>
-                            ))}
-                      </div>
+                      {filterexpenses.length === 0 ? (
+                        <p>No expenses match your filter criteria.</p>
+                      ) : (
+                        filterexpenses.map((e, index) => (
+                          <ol key={index}>
+                            <li>Use For = {e.category}</li>
+                            <li>Payment Mode = ({e.payment})</li>
+                            <li>Amount = {e.amount}</li>
+                            <li>Remark = {e.remark}</li>
+                          </ol>
+                        ))
+                      )}
                     </div>
                   </div>
                 </div>
